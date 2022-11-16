@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body{
+    height: 100vh;
+   
+}
+h1{
+    font-size: 45px;
+    color: #F37CD3;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    text-align: center;
+
+    
+}
+.wrapper{
+    background-color: #504883;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.login_main{
+    margin-top: 50px;
+}
+.levels{
+    display: flex;
+    justify-content: center;
+}
+.your_level{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.levels div:nth-child(2){
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.levels div button{
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color:#F0E9AB;
+    border-radius: 8px;
+    border: none;
+    
+    
+}
+.levels a{
+    color:#1d3d4e;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 3s;
+    font-weight: bold;
+}
+.levels button:hover {
+    background: #F37CD3;
+    transform: scale(1.2);
+}
+
+
+@media screen and (max-width:950px){   
+    h1{
+        font-size: 30px;
+        margin-left: unset;
+    } 
+    .img1 img{
+        width: 140px;
+        height: 150px;
+    }
+}
+@media screen and (max-width:660px){   
+    h1{
+        font-size: 30px;
+        margin-left: unset;
+    } 
+    .img1 img{
+        width: 140px;
+        height: 150px;
+    }
+}
+@media screen and (max-width:515px){   
+    h1{
+        font-size: 25px;
+    } 
+    .img1{
+        display: none;
+    }
+}
+
+#container{
+    background-color: #504883;
+    height: 100%;   
+}
+#board{
+    width: 400px;
+}
+
+#board .scores{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#right{
+    padding:5px;
+    background-color:#F37CD3;
+    width: 70px;    
+    text-align: center;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px #133512;  
+    display:none;
+}
+#wrong{
+    padding:5px;
+    background-color: #F0B725;
+    width: 80px;   
+    text-align: center;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px #45150c;   
+    display:none;
+}
+.my_level{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-left: -25px;
+}
+#level{
+    padding: 10px 12px;
+    background-color:#F0E9AB;
+    color:#3D2E9C;    
+    font-weight: bold;
+    font-size: 18px;
+    text-align:center;    
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px #1F9F41;
+    width: 100px;
+   
+}
+.myScore{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top:30px
+}
+#score{
+    padding: 10px 12px;
+    color:#3D2E9C;
+    text-align:center;    
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px grey;
+    width: 180px;   
+    margin-left: 5px;
+}
+#problem{
+    padding:5px;
+    background-color:#C3ABF5;
+    width: 100%;
+    height: 60px;
+    text-align:center;
+    font-size: 40px;
+    color:#3D2E9C;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px #7d63b4; 
+    font-weight: 400;   
+}
+#instruction{
+    padding:5px;
+    background-color:#F0E9AB;
+    margin-top: 30px;
+    line-height: 25px;
+    width: 100%;
+    height: 30px;    
+    text-align:center;
+    font-size: 20px;
+    color:#3D2E9C;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px #EF8D2A;  
+}
+#answers{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#answer1, #answer2, #answer3, #answer4{
+    padding: 5px;
+    height: 50px; 
+    line-height: 50px;
+    width: 60px;
+    background-color: #F37CD3;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 34px;
+    text-align:center;    
+    box-shadow: 0px 5px 5px #8167b9;    
+}
+#answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover{
+    background-color:#3C72A7;
+    color:white;
+    cursor:pointer;
+}
+
+.run{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.run #start {
+    width: 140px;
+    padding:5px;
+    background:#F37CD3;
+    align-items:center;
+    border-radius:5px;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    border-radius: 5px;   
+    box-shadow: 0px 5px 5px #14417E;    
+}
+.timer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#reset{
+    padding:5px;
+    background-color:#9837ae;
+    width: 70px;
+    position: absolute;    
+    margin: 300px 210px;
+    text-align: center;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px #281036;
+    -moz-box-shadow: 0px 5px 5px #281036;
+    -webkit-box-shadow: 0px 5px 5px #281036;    
+    display:none;
+}
+#reset:hover, #start:hover{
+    background-color: #C3ABF5;
+    cursor:pointer;
+    color:#61469c;
+}
+#time{
+    padding:5px;
+    background-color:#F0E9AB;
+    width: 105px;
+    text-align: center;
+    position: absolute;
+    margin: 30px 350px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px #61469c;   
+    display:none;
+    color:#3D2E9C;
+}
+#gameover{
+    padding:20px 5px 0;
+    line-height: 30px;
+    background-color:#F37CD3;
+    color: #3D2E9C;
+    width: 350px;
+    height: 170px;
+    position:absolute;
+    margin: -300px 0 0 25px;
+    text-align:center;
+    font-size: 25px; 
+    border-radius: 5px;
+    z-index: 2;
+    display:none;
+}
+
+
+.das{
+    font-size: 25px;
+    color: #F3AB4F;
+    text-align:center;
+    margin-bottom: 10px;
+    padding-top: 5px;
+   
+
+}
+
+.true{
+    background-color:#F0E9AB;
+}
+
+.false{
+    background-color:#C3ABF5;
+    color:#3D2E9C;
+}
+
+@media screen and (max-width:950px){
+    .my_level{
+        margin-left:unset;
+
+    }
+   
+    .img img{
+        width: 220px;
+        height: 220px;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    .my_level{
+        margin-left:unset;
+
+    }
+   
+    .img img{
+        width: 180px;
+        height: 170px;
+    }
+    #board{
+        width: 300px;
+    }
+    #answer1, #answer2, #answer3, #answer4{
+        width: 70px;
+        margin: 3px;   
+       font-size: 25px;
+
+    }
+    #gameover{
+        width: 260px;
+        margin: -300px 0 0 10px;      
+    }
+}
+@media screen and (max-width:600px){
+    h1{
+        font-size: 25px;
+        margin-left: unset;
+        text-align: center;
+    }
+    .img {
+        display: none;
+    }  
+    
+    #board{
+        width: 250px;
+    }
+    #gameover{
+        width: 220px;
+        margin: -200px 0 0 10px; 
+        text-align: center;
+    }
+    #instruction{
+       
+        font-size: 15px;
+     
+    }
+   
+}
+
+@media screen and (max-width:275px){   
+    #board{
+        width: 150px;
+        text-align: center;
+    }
+   
+   
+}
+
+@media screen and (max-width:275px){   
+    #board{
+        width: 200px;
+        text-align: center;
+    }
+   
+   
+} 
