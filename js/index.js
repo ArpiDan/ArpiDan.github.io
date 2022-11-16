@@ -101,7 +101,7 @@ function startCountdown() {
                 hide("score");
             } 
                 else if(score > uncor) {
-                    document.getElementById("gameover").innerHTML = "<p>Շնորհավորում եմ, դուք հաղթել եք:</p><p>Վաստակած միավորների թիվը՝ " + score + "</p>";
+                    document.getElementById("gameover").innerHTML = "<p>Շնորհավորում եմ, դուք հաղթել եք:</p><p>Միավորների թիվը՝ " + score + "</p>";
                 hide("uncor");  
                 
                 } else if (score < uncor){document.getElementById("gameover").innerHTML = "<p>Խաղն ավարտվեց:</p><p>Կրկնեք բազմապատկման աղյուսակը:</p>";
